@@ -12,72 +12,38 @@ Este repositorio contiene configuraciones y comandos para levantar distintos mot
 
 ### MySQL 5.7
 ```bash
-docker run -d \
-  --name mysql5 \
-  -e MYSQL_ROOT_PASSWORD=rootpass \
-  -e MYSQL_DATABASE=devdb \
-  -p 3307:3306 \
-  mysql:5.7
+docker run -d --name mysql5 -e MYSQL_ROOT_PASSWORD=rootpass -e MYSQL_DATABASE=devdb -p 3307:3306 mysql:5.7
 ```
 
 ### MySQL 8
 ```bash
-docker run -d \
-  --name mysql8 \
-  -e MYSQL_ROOT_PASSWORD=rootpass \
-  -e MYSQL_DATABASE=devdb \
-  -p 3308:3306 \
-  mysql:8
+docker run -d --name mysql8 -e MYSQL_ROOT_PASSWORD=rootpass -e MYSQL_DATABASE=devdb -p 3308:3306 mysql:8
 ```
 
 ### MariaDB
 ```bash
-docker run -d \
-  --name mariadb \
-  -e MARIADB_ROOT_PASSWORD=rootpass \
-  -e MARIADB_DATABASE=devdb \
-  -p 3309:3306 \
-  mariadb:latest
+docker run -d --name mariadb -e MARIADB_ROOT_PASSWORD=rootpass -e MARIADB_DATABASE=devdb -p 3309:3306 mariadb:latest
 ```
 
 ### MongoDB
 
 ```bash
-docker run -d \
-  --name mongodb \
-  -e MONGO_INITDB_ROOT_USERNAME=root \
-  -e MONGO_INITDB_ROOT_PASSWORD=rootpass \
-  -p 27017:27017 \
-  mongo:latest
+docker run -d --name mongodb -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=rootpass -p 27017:27017 mongo:latest
 ```
 
 ### Oracle XE
 ```bash
-docker run -d \
-  --name oracle-xe \
-  -p 1521:1521 -p 5500:5500 \
-  -e ORACLE_PWD=rootpass \
-  gvenzl/oracle-xe
+docker run -d --name oracle-xe -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=rootpass gvenzl/oracle-xe
 ```
 
 ### SQL Server
 ```bash
-docker run -d \
-  --name sqlserver \
-  -e 'ACCEPT_EULA=Y' \
-  -e 'SA_PASSWORD=RootPass123!' \
-  -p 1433:1433 \
-  mcr.microsoft.com/mssql/server:2019-latest
+docker run -d --name sqlserver -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=RootPass123!' -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 ### PostgreSQL
 ```bash
-docker run -d \
-  --name postgres \
-  -e POSTGRES_PASSWORD=rootpass \
-  -e POSTGRES_DB=devdb \
-  -p 5432:5432 \
-  postgres:latest
+docker run -d --name postgres -e POSTGRES_PASSWORD=rootpass -e POSTGRES_DB=devdb -p 5432:5432 postgres:latest
 ```
 
 ## Conexión desde aplicaciones
