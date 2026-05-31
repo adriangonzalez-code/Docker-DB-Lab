@@ -8,8 +8,6 @@ Este repositorio contiene configuraciones y comandos para levantar distintos mot
 * Conexión a internet para descargar las imágenes oficiales.
 * Conocimientos básicos de terminal y Docker.
 
----
-
 ## Motores disponibles
 
 ### MySQL 5.7
